@@ -1,0 +1,142 @@
+/* КНОПКА СООБЩИТЬ ОБ ОШИБКЕ */
+.b-feedback{
+  position:fixed;
+  left:20px;
+  bottom:90px;
+  width:48px;
+  height:48px;
+  z-index:999;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(10px);
+  cursor:pointer;
+  background:none !important;
+  border:none !important;
+  box-shadow:none !important;
+  transition:opacity .35s, transform .35s;
+}
+/* появляется вместе со стрелкой */
+.b-to-top.active ~ .b-feedback{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+/* скрываем стандартные элементы */
+.b-feedback .hover-activator,
+.b-feedback .marker-text{
+  display:none !important;
+}
+/* кликабельная область */
+.b-feedback .marker-positioner{
+  position:absolute;
+  top:0;
+  left:-5px;      
+  width:calc(100% + 5px);
+  height:calc(100% + 5px); 
+  display:block;
+  z-index:1;
+  cursor:pointer;
+}
+/* фон */
+.b-feedback::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  backdrop-filter:blur(8px);
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:
+  0 6px 18px rgba(0,0,0,.25),
+  inset 0 1px 0 rgba(255,255,255,.15);
+  transition:transform .35s, box-shadow .35s;
+  pointer-events:none;
+}
+/* иконка */
+.b-feedback::after{
+  content:"⚠️";
+  position:absolute;
+  top:50%;
+  left:50%;
+  font-size:18px;
+  transform:translate(-50%,calc(-50% - 2px));
+  transition:transform .35s;
+  pointer-events:none;
+}
+/* hover */
+.b-feedback:hover::before{
+  transform:translateY(-3px);
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.35),
+  inset 0 1px 0 rgba(255,255,255,.2);
+}
+.b-feedback:hover::after{
+  transform:translate(-50%,calc(-50% - 5px));
+}
+
+/* КНОПКА Back to top */
+.b-to-top{
+  position:fixed;
+  left:20px;
+  bottom:25px;
+  width:48px;
+  height:48px;
+  z-index:1000;
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(10px);
+  cursor:pointer;
+  background:none !important;
+  border:none !important;
+  box-shadow:none !important;
+  transition:opacity .35s, transform .35s;
+}
+/* появляется при прокрутке */
+.b-to-top.active{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+/* скрываем стандартную кнопку */
+.b-to-top .slide,
+.b-to-top .arrow{
+  display:none !important;
+}
+/* фон кнопки */
+.b-to-top::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  backdrop-filter:blur(8px);
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:
+  0 6px 18px rgba(0,0,0,.25),
+  inset 0 1px 0 rgba(255,255,255,.15);
+  transition:transform .35s, box-shadow .35s;
+}
+/* стрелка */
+.b-to-top::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:12px;
+  height:12px;
+  border-left:3px solid #222;
+  border-top:3px solid #222;
+  transform:translate(-50%,-35%) rotate(45deg);
+  transition:transform .35s;
+}
+/* синхронный hover */
+.b-to-top.active:hover::before{
+  transform:translateY(-3px);
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.35),
+  inset 0 1px 0 rgba(255,255,255,.2);
+}
+
+.b-to-top.active:hover::after{
+  transform:translate(-50%,-50%) rotate(45deg);
+}
