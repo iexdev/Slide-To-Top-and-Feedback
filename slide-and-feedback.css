@@ -136,7 +136,62 @@
   0 10px 25px rgba(0,0,0,.35),
   inset 0 1px 0 rgba(255,255,255,.2);
 }
-
 .b-to-top.active:hover::after{
   transform:translate(-50%,-50%) rotate(45deg);
+}
+
+
+/* Beta */
+.n-popup-block{
+  position:fixed;
+  left:20px;
+  bottom:155px; /* над feedback */
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(10px);
+  transition:opacity .35s, transform .35s;
+  z-index:998;
+}
+/* появление при прокрутке */
+body:has(.b-to-top.active) .n-popup-block{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
+}
+/* кнопка */
+.n-popup-beta{
+  cursor:default !important;
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:14px;
+  background:linear-gradient(135deg,#ffc400,#ffe082);
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:
+  0 6px 18px rgba(0,0,0,.25),
+  inset 0 1px 0 rgba(255,255,255,.15);
+  cursor:pointer;
+  position:relative;
+  transition:transform .35s, box-shadow .35s;
+}
+/* иконка */
+.n-popup-beta::before{
+  content:"β";
+  font-size:20px;
+  font-weight:800;
+  color:#2a2a2a;
+  transform:translateY(-1px);
+  transition:transform .35s;
+}
+/* hover */
+.n-popup-beta:hover{
+  transform:translateY(-3px);
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.35),
+  inset 0 1px 0 rgba(255,255,255,.2);
+}
+.n-popup-beta:hover::before{
+  transform:translateY(-4px);
 }
