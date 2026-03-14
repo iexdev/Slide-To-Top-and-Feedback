@@ -195,3 +195,163 @@ body:has(.b-to-top.active) .n-popup-block{
 .n-popup-beta:hover::before{
   transform:translateY(-4px);
 }
+/* ============================= */
+/* МОДАЛЬНОЕ ОКНО */
+/* ============================= */
+.b-modal .inner{
+  max-width:720px;
+  margin:auto;
+  padding:22px 24px;
+  background:rgba(255,255,255,.72);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.65);
+}
+.b-modal .subheadline.m5{
+  margin:0 0 18px;
+  padding:10px 14px;
+  font-size:15px;
+  font-weight:600;
+  color:#2f3440;
+  background:rgba(255,255,255,.55);
+  backdrop-filter:blur(10px);
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.14),
+    inset 0 1px 0 rgba(255,255,255,.7);
+}
+.b-modal .about{
+  margin-top:14px;
+  margin-bottom:22px;
+  padding:16px 18px;
+  background:rgba(255,255,255,.5);
+  backdrop-filter:blur(8px);
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.45);
+  box-shadow:
+    0 6px 16px rgba(0,0,0,.12),
+    inset 0 1px 0 rgba(255,255,255,.65);
+}
+.b-modal .b-prgrph{
+  margin:0 0 12px;
+  line-height:1.55;
+  color:#2f3440;
+}
+.b-modal .b-prgrph:last-child{
+  margin-bottom:0;
+}
+.b-modal .b-shiki_editor{
+  margin-top:18px;
+  padding:22px 16px 16px;
+  background:rgba(255,255,255,.55);
+  backdrop-filter:blur(12px);
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.45);
+  box-shadow:
+    0 10px 26px rgba(0,0,0,.16),
+    inset 0 1px 0 rgba(255,255,255,.7);
+}
+.b-modal .editor-controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:12px;
+}
+.b-modal .editor-controls span,
+.b-modal .editor-controls label{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border-radius:6px;
+  background:rgba(255,255,255,.65);
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:
+    0 3px 8px rgba(0,0,0,.12),
+    inset 0 1px 0 rgba(255,255,255,.7);
+  cursor:pointer;
+  transition:.15s;
+}
+.b-modal .editor-controls span:hover,
+.b-modal .editor-controls label:hover{
+  transform:translateY(-1px);
+  box-shadow:
+    0 6px 14px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.85);
+}
+.b-modal textarea.editor-area{
+  margin-top:8px;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid rgba(0,0,0,.12);
+  background:rgba(255,255,255,.9);
+  min-height:120px;
+}
+.b-modal .b-shiki_editor footer{
+  margin-top:14px;
+  padding-top:10px;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  border-top:1px solid rgba(0,0,0,.08);
+}
+.b-modal .b-shiki_editor footer .hide{
+  display:none;
+}
+.b-modal .b-shiki_editor footer input[type="submit"],
+.b-modal .b-shiki_editor footer .unpreview,
+.b-modal .b-shiki_editor footer .preview{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:30px;
+  padding:0 12px;
+  font-size:13px;
+  font-weight:500;
+  cursor:pointer;
+  color:#2f3440;
+  background:rgba(255,255,255,.65);
+  backdrop-filter:blur(6px);
+  border-radius:7px;
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:
+    0 3px 8px rgba(0,0,0,.12),
+    inset 0 1px 0 rgba(255,255,255,.75);
+}
+.b-modal .b-shiki_editor footer input[type="submit"]{
+  color:#fff;
+  background:linear-gradient(180deg,#5a97ff,#3f7ff0);
+  border-color:#3f7ff0;
+  box-shadow:
+    0 4px 12px rgba(63,127,240,.35),
+    inset 0 1px 0 rgba(255,255,255,.25);
+}
+.b-modal .about-bb_codes{
+  margin-left:auto;
+}
+.b-modal .about-bb_codes a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:30px;
+  padding:0 12px;
+  font-size:13px;
+  font-weight:500;
+  color:#2f3440;
+  text-decoration:none;
+  background:rgba(255,255,255,.65);
+  backdrop-filter:blur(6px);
+  border-radius:7px;
+  border:1px solid rgba(255,255,255,.5);
+  box-shadow:
+    0 3px 8px rgba(0,0,0,.12),
+    inset 0 1px 0 rgba(255,255,255,.75);
+}
